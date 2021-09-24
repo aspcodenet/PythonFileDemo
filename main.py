@@ -1,7 +1,23 @@
+odd = True
 with open("namn.txt","r") as namnFilen:
     for line in namnFilen:
         line = line.replace("\n","")
-        print(line)
+        if odd == True:
+            print(line)
+            odd = False
+        else:
+            odd = True
+
+
+
+odd = True
+with open("namn.txt","r") as namnFilen:
+    for line in namnFilen:
+        line = line.replace("\n","")
+        if odd == True:
+            print(line)
+        odd = not odd            
+
 
 
 #Printa alla namn som finns i filen
